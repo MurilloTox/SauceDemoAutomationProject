@@ -15,6 +15,9 @@ public class LoginPage extends BasePage {
     @FindBy(id = "login-button")
     private WebElement loginButton;
 
+    @FindBy(id = "login_button_container")
+    private WebElement loginForm;
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -23,5 +26,9 @@ public class LoginPage extends BasePage {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         loginButton.click();
+    }
+
+    public boolean isLoginFormDisplayed() {
+        return loginForm.isDisplayed();
     }
 }
