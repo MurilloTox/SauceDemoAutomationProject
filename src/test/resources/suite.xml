@@ -1,2 +1,23 @@
-<suite name="Web Automation Suite">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SauceDemo Test Suite" parallel="none">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.saucedemo.com/"/>
+
+    <test name="Purchase Flow Tests">
+        <classes>
+            <class name="tests.PurchaseFlowTest"/>
+        </classes>
+    </test>
+
+    <test name="Shopping Cart Tests">
+        <classes>
+            <class name="tests.ShoppingCartTest"/>
+        </classes>
+    </test>
+
+    <test name="Logout Tests">
+        <classes>
+            <class name="tests.LogoutTest"/>
+        </classes>
+    </test>
 </suite>

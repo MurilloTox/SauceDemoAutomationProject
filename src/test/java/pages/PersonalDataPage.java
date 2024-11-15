@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.basePage.BasePage;
 
-public class CheckoutPage extends BasePage {
+public class PersonalDataPage extends BasePage {
     @FindBy(id = "first-name")
     private WebElement firstNameInput;
 
@@ -18,13 +18,13 @@ public class CheckoutPage extends BasePage {
     @FindBy(id = "continue")
     private WebElement continueButton;
 
-    @FindBy(id = "finish")
-    private WebElement finishButton;
+    @FindBy(id = "cancel")
+    private WebElement cancelButton;
 
     @FindBy(css = ".complete-header")
     private WebElement confirmationMessage;
 
-    public CheckoutPage(WebDriver driver) {
+    public PersonalDataPage(WebDriver driver) {
         super(driver);
     }
 
@@ -35,8 +35,8 @@ public class CheckoutPage extends BasePage {
         continueButton.click();
     }
 
-    public void finishPurchase() {
-        finishButton.click();
+    public void cancelPurchase() {
+        cancelButton.click();
     }
 
     public boolean isPurchaseComplete() {

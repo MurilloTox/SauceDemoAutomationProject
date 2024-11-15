@@ -8,7 +8,7 @@ import utils.basePage.BasePage;
 import java.util.List;
 import java.util.Random;
 
-public class ProductsPage extends BasePage {
+public class ProductPage extends BasePage {
     @FindBy(css = ".inventory_item")
     private List<WebElement> products;
 
@@ -27,7 +27,7 @@ public class ProductsPage extends BasePage {
     @FindBy(id = "logout_sidebar_link")
     private WebElement logoutLink;
 
-    public ProductsPage(WebDriver driver) {
+    public ProductPage(WebDriver driver) {
         super(driver);
     }
 
@@ -52,11 +52,5 @@ public class ProductsPage extends BasePage {
 
     public void goToCart() {
         cartLink.click();
-    }
-
-    public void logout() {
-        menuButton.click();
-        wait.until(d -> logoutLink.isDisplayed());
-        logoutLink.click();
     }
 }

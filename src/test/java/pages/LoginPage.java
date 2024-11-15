@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import utils.basePage.BasePage;
 
 public class LoginPage extends BasePage {
+
     @FindBy(id = "user-name")
     private WebElement usernameInput;
 
@@ -18,10 +19,6 @@ public class LoginPage extends BasePage {
     @FindBy(id = "login_button_container")
     private WebElement loginForm;
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
-
     public void login(String username, String password) {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
@@ -30,5 +27,10 @@ public class LoginPage extends BasePage {
 
     public boolean isLoginFormDisplayed() {
         return loginForm.isDisplayed();
+    }
+
+    public LoginPage(WebDriver driver, String url){
+        super(driver);
+        super.driver.get(url);
     }
 }
