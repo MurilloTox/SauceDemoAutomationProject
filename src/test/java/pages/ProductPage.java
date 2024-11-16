@@ -37,11 +37,12 @@ public class ProductPage extends BasePage {
         addToCartButtons.get(randomProduct).click();
     }
 
-    public int getCartItemsCount() {
-        if (cartBadge.isDisplayed()) {
-            return Integer.parseInt(cartBadge.getText());
-        }
-        return 0;
+    public void clickOnBurqerMenu(){
+        menuButton.click();
+    }
+
+    public void logOut(){
+        logoutLink.click();
     }
 
     public void goToCart() {

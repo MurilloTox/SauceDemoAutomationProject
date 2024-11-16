@@ -25,8 +25,8 @@ public class LoginPage extends BasePage {
         loginButton.click();
     }
 
-    public boolean isLoginFormDisplayed() {
-        return loginForm.isDisplayed();
+    public boolean isLoginDisplayed() {
+        return loginButton.isDisplayed();
     }
 
     public LoginPage(WebDriver driver, String url){

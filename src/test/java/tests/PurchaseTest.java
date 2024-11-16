@@ -18,7 +18,7 @@ public class PurchaseTest extends BaseTest {
         yourCartPage.proceedToCheckout();
     }
     @Test(dataProvider = "PurchaseDataProvider", dataProviderClass = DataProviderTest.class)
-    public void Test1(String name, String lastName, String postalIC, String expected){
+    public void TestPurchase(String name, String lastName, String postalIC, String expected){
         informationPage.fillPersonalInformation(name,lastName,postalIC);
         overviewPage.clickOnFinish();
         Assert.assertEquals(finishPage.getText(), expected);

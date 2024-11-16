@@ -1,0 +1,17 @@
+package tests;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import utils.DataProviderTest;
+import utils.baseTest.BaseTest;
+
+public class LogOutTest extends BaseTest {
+    @Test(dataProvider = "LoginDataProvider", dataProviderClass = DataProviderTest.class)
+    public void logOutTest(String user, String password){
+        loginPage.login(user, password);
+        productPage.clickOnBurqerMenu();
+        //Assert.assertTrue(productPage.isElementDisplayed(productPage.getBtnLogout()));
+        productPage.logOut();
+        Assert.assertTrue(loginPage.isLoginDisplayed());
+    }
+}

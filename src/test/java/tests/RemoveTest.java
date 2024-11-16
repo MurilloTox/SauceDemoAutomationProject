@@ -8,7 +8,7 @@ import utils.baseTest.BaseTest;
 public class RemoveTest extends BaseTest {
 
     @Test(dataProvider = "LoginDataProvider", dataProviderClass = DataProviderTest.class)
-    public void test2(String user, String password) {
+    public void removeTest(String user, String password) {
         loginPage.login(user, password);
         for(int i=0; i<3; i++){
             productPage.addRandomProductToCart();
