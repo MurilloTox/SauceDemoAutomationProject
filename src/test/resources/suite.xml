@@ -5,19 +5,19 @@
 
     <test name="Purchase Flow Tests">
         <classes>
-            <class name="tests.PurchaseFlowTest"/>
+            <class name="tests.PurchaseTest"/>
         </classes>
     </test>
 
-    <test name="Shopping Cart Tests">
+    <test name="Remove Shopping Cart Tests">
         <classes>
-            <class name="tests.ShoppingCartTest"/>
+            <class name="tests.RemoveTest"/>
         </classes>
     </test>
 
     <test name="Logout Tests">
         <classes>
-            <class name="tests.LogoutTest"/>
+            <class name="tests.LogOutTest"/>
         </classes>
     </test>
 </suite>
