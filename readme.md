@@ -2,6 +2,10 @@
 
 Este proyecto automatiza la aplicación web [Sauce Demo](https://www.saucedemo.com/) utilizando Selenium con Java y TestNG. El objetivo es implementar pruebas automatizadas para los siguientes escenarios:
 
+## Documentación del Proyecto
+
+Dentro de la carpeta JavaDocumentacion se encuentra el JavaDoc generado, para verlo se tiene que abrir el index.
+
 ## Escenarios de Prueba
 
 1. **Compra de un Producto**
