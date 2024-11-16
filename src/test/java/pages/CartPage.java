@@ -7,6 +7,10 @@ import utils.basePage.BasePage;
 
 import java.util.List;
 
+/**
+ * Pagina del carrito de compras
+ * */
+
 public class CartPage extends BasePage {
     @FindBy(css = ".cart_item")
     private List<WebElement> cartItems;

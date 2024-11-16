@@ -6,6 +6,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import pages.*;
 
+/**
+ * Test del que nuestros demas test van a heredar
+ * */
+
 public class BaseTest {
     public WebDriver driver = new ChromeDriver();
     public LoginPage loginPage;
@@ -15,6 +19,9 @@ public class BaseTest {
     public FinishPage finishPage;
     public OverviewPage overviewPage;
     @BeforeClass
+    /**
+     * SetUp para inicializar las pages que usaremos durante el test
+     * */
     public void setUp() {
         loginPage = new LoginPage(driver, "https://www.saucedemo.com/");
         productPage= new ProductPage(driver);
@@ -25,6 +32,9 @@ public class BaseTest {
     }
 
     @AfterTest
+    /**
+     * Metodo que cierra la ventana cuando termina el test
+     * */
     public void close(){
         driver.close();
     }

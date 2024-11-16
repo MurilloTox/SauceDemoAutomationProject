@@ -5,6 +5,10 @@ import org.testng.annotations.Test;
 import utils.DataProviderTest;
 import utils.baseTest.BaseTest;
 
+/**
+ * Test para remover los artículos del carrito
+ * */
+
 public class RemoveTest extends BaseTest {
 
     @Test(dataProvider = "LoginDataProvider", dataProviderClass = DataProviderTest.class)

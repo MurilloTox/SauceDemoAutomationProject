@@ -8,6 +8,10 @@ import utils.basePage.BasePage;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Pagina con los productos disponibles
+ * */
+
 public class ProductPage extends BasePage {
     @FindBy(css = ".inventory_item")
     private List<WebElement> products;

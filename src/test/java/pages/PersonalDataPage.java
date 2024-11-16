@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.basePage.BasePage;
 
+/**
+ * Pagina para llenar nuestros datos personales
+ * */
+
 public class PersonalDataPage extends BasePage {
     @FindBy(id = "first-name")
     private WebElement firstNameInput;

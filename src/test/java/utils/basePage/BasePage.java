@@ -8,6 +8,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+/**
+ * Pagina base que heradaran las demas
+ * */
+
 public class BasePage {
     public WebDriver driver;
 

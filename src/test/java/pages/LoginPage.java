@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.basePage.BasePage;
 
+/**
+ * Pagina del login
+ * */
+
 public class LoginPage extends BasePage {
 
     @FindBy(id = "user-name")

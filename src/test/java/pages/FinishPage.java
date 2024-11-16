@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utils.basePage.BasePage;
 
+/**
+ * Pagina final del flujo
+ * */
+
 public class FinishPage extends BasePage {
     public FinishPage(WebDriver driver) {
         super(driver);
