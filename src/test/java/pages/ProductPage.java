@@ -37,12 +37,6 @@ public class ProductPage extends BasePage {
         addToCartButtons.get(randomProduct).click();
     }
 
-    public void addMultipleProductsToCart(int quantity) {
-        for (int i = 0; i < quantity && i < addToCartButtons.size(); i++) {
-            addToCartButtons.get(i).click();
-        }
-    }
-
     public int getCartItemsCount() {
         if (cartBadge.isDisplayed()) {
             return Integer.parseInt(cartBadge.getText());
