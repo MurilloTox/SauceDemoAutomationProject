@@ -17,21 +17,27 @@ public class CartPage extends BasePage {
     @FindBy(id = "checkout")
     private WebElement checkoutButton;
 
+    @FindBy(className = "shopping_cart_link")
+    private WebElement cartCant;
+
+
     public CartPage(WebDriver driver) {
         super(driver);
     }
 
-    public void removeAllItems() {
-        while (!removeButtons.isEmpty()) {
+    public void removeThreeItems() {
+        int counter=0;
+        while (counter<3) {
             removeButtons.get(0).click();
+            counter++;
         }
-    }
-
-    public boolean isCartEmpty() {
-        return cartItems.isEmpty();
     }
 
     public void proceedToCheckout() {
         checkoutButton.click();
+    }
+
+    public String checkCantCart(){
+        return cartCant.getText();
     }
 }
