@@ -15,7 +15,7 @@ public class ProductPage extends BasePage {
     @FindBy(css = ".shopping_cart_link")
     private WebElement cartLink;
 
-    @FindBy(css = ".btn_inventory")
+    @FindBy(css = ".btn_inventory.btn_primary")
     private List<WebElement> addToCartButtons;
 
     @FindBy(css = ".shopping_cart_badge")
@@ -39,6 +39,10 @@ public class ProductPage extends BasePage {
 
     public void clickOnBurqerMenu(){
         menuButton.click();
+    }
+
+    public WebElement getLogOutButton(){
+        return logoutLink;
     }
 
     public void logOut(){

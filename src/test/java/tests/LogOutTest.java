@@ -10,7 +10,7 @@ public class LogOutTest extends BaseTest {
     public void logOutTest(String user, String password){
         loginPage.login(user, password);
         productPage.clickOnBurqerMenu();
-        //Assert.assertTrue(productPage.isElementDisplayed(productPage.getBtnLogout()));
+        Assert.assertTrue(productPage.isElementDisplayed(productPage.getLogOutButton()));
         productPage.logOut();
         Assert.assertTrue(loginPage.isLoginDisplayed());
     }
