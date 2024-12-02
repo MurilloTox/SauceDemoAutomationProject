@@ -14,12 +14,7 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
-    inputs:
-      browserName:
-        description: 'Browser type'
-        required: false
-        type: string
-        default: 'chrome'
+
 
 jobs:
   build:
@@ -34,14 +29,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-
     - name: Build with Maven
-      id: build
-      run: mvn clean
+      run: mvn -B package --file pom.xml
 
-    - name: Run tests
-      if: steps.build.outcome == 'success'
-      run: mvn -DbrowserName=${{ inputs.browserName || 'CHROME' }} verify
+
+
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph

@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SauceDemo Test Suite" parallel="none">
-    <parameter name="browser" value="chrome"/>
+    <!-- <parameter name="browser" value="chrome"/>-->
     <parameter name="url" value="https://www.saucedemo.com/"/>
 
     <test name="Purchase Flow Tests">
